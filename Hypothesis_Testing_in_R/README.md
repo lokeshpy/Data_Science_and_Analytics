@@ -70,9 +70,9 @@ t.test(scores ~ group, data = my_data,
 
 ### R Output:
  
-![R Code Outout] (https://github.com/lokeshpy/Data_Science_and_Analytics/blob/master/images/image13.JPG)
+![R Code Output](https://github.com/lokeshpy/Data_Science_and_Analytics/blob/master/images/image13.JPG)
 ![Rcode Output1](https://github.com/lokeshpy/Data_Science_and_Analytics/blob/master/images/image14.JPG)
-![R Code Output2] (https://github.com/lokeshpy/Data_Science_and_Analytics/blob/master/images/image15.JPG)
+![R Code Output2](https://github.com/lokeshpy/Data_Science_and_Analytics/blob/master/images/image15.JPG)
 ![Rcode Output3](https://github.com/lokeshpy/Data_Science_and_Analytics/blob/master/images/image16.JPG)
 
  
