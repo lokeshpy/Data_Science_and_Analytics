@@ -65,7 +65,7 @@ ggboxplot(my_data, x="group", y="scores",ylab = "Scores", xlab = "Group")
 t.test(scores ~ group, data = my_data,
        
        var.equal = TRUE, alternative = "less")
-
+```
 
 
 ### R Output:
