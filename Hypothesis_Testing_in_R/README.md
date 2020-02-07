@@ -77,5 +77,5 @@ t.test(scores ~ group, data = my_data,
 
  
 Scattred and Box Plot Graph:
-![R Graph](https://github.com/lokeshpy/Data_Science_and_Analytics/blob/master/images/image17.JPG) 
+![R Graph] (https://github.com/lokeshpy/Data_Science_and_Analytics/blob/master/images/image17.JPG) 
 
