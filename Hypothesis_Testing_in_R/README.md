@@ -65,11 +65,12 @@ ggboxplot(my_data, x="group", y="scores",ylab = "Scores", xlab = "Group")
 t.test(scores ~ group, data = my_data,
        
        var.equal = TRUE, alternative = "less")
-
+```
 
 
 ### R Output:
  
+<<<<<<< HEAD
 ![image1](https://github.com/lokeshpy/Data_Science_and_Analytics/blob/master/images/image13.JPG)
 ![pict2](https://github.com/lokeshpy/Data_Science_and_Analytics/blob/master/images/image14.JPG)
 ![lab3](https://github.com/lokeshpy/Data_Science_and_Analytics/blob/master/images/image15.JPG)
@@ -78,4 +79,15 @@ t.test(scores ~ group, data = my_data,
  
 Scattred and Box Plot Graph:
 ![Graph](https://github.com/lokeshpy/Data_Science_and_Analytics/blob/master/images/image17.JPG) 
+=======
+![R Code Output](https://github.com/lokeshpy/Data_Science_and_Analytics/blob/master/images/image13.JPG)
+![Rcode Output1](https://github.com/lokeshpy/Data_Science_and_Analytics/blob/master/images/image14.JPG)
+![R Code Output2](https://github.com/lokeshpy/Data_Science_and_Analytics/blob/master/images/image15.JPG)
+![Rcode Output3](https://github.com/lokeshpy/Data_Science_and_Analytics/blob/master/images/image16.JPG)
+
+ 
+Scattred and Box Plot Graph:
+
+![R Graph](https://github.com/lokeshpy/Data_Science_and_Analytics/blob/master/images/image17.JPG) 
+>>>>>>> e8014239a711646383442a023a278dfbecbfc3df
 
