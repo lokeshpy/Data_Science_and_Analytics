@@ -1,0 +1,153 @@
+---
+title: "MIS581_Profolio_porject"
+author: "Lokesh Prabakaran"
+date: "May 7, 2021"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+setwd('/Users/czlxp/Desktop/Lokesh/CSU_Global/Assiggnments/MIS581_Capstone_ BIDA')
+library(gains)
+library(e1071)
+library(MASS)
+library(pROC)
+library(ROCR)
+library(rpart)
+library(rpart.plot)
+library(caret)
+library(tidyverse)
+library(tidyr)
+library(stats)
+
+```
+**Import the dataset into R.**
+
+```{r}
+
+churn <- read.csv("Telco_Customer_Churn.csv")
+
+
+```
+**Display the structure of the dataset.**
+
+```{r}
+
+str(churn)
+
+
+```
+
+**Summary of the dataset.**
+
+```{r}
+
+summary(churn)
+
+
+```
+
+**Count number of NAs in the  dataset**
+
+```{r}
+
+colSums(is.na(churn))
+
+```
+**print the column names in list**
+
+```{r}
+
+t(t(names(churn)))
+
+
+```
+**Display first 5 observations of the dataset.**
+
+```{r}
+
+head(churn, 5)
+
+
+```
+
+**Displaying dataset dimension.**
+
+```{r}
+
+dim(churn)
+
+
+```
+```{r}
+# Removing NAs 
+
+churn=na.omit(churn)
+```
+
+```{r}
+# Removing CustomerID variable
+
+churn$customerID=NULL
+```
+```{r}
+# Changing Gender into factor variable
+
+churn$gender=as.factor(churn$gender)
+```
+```{r}
+# Changing SeniorCitizen into factor variable
+
+churn$SeniorCitizen=as.factor(churn$SeniorCitizen)
+```
+```{r}
+# Changing Partner into factor variable
+
+churn$Partner=as.factor(churn$Partner)
+```
+```{r}
+# Changing Dependents into factor variable
+
+churn$Dependents=as.factor(churn$Dependents)
+```
+```{r}
+# Changing Churn into integer variable
+
+churn$tenure=as.integer(churn$tenure)
+```
+```{r}
+# Changing phoneServices into factor variable
+
+churn$PhoneService=as.factor(churn$PhoneService)
+```
+```{r}
+# Changing multipleLines into factor variable
+
+churn$MultipleLines=as.factor(churn$MultipleLines)
+```
+```{r}
+# Changing InternetService to factor variable
+
+churn$InternetService=as.factor(churn$InternetService)
+```
+
+```{r}
+# Two-Sample t-test for numerical variables.
+
+t.test(tenure ~ Churn, data = churn)
+
+t.test(MonthlyCharges ~ Churn, data = churn)
+
+t.test(TotalCharges  ~ Churn, data = churn)
+
+```
+
+```{r}
+# Chi-Square t-test for numerical variables.
+
+chisq.test(table(churn$Churn, churn$SeniorCitizen))
+chisq.test(table(churn$Churn, churn$Dependents))
+
+```
